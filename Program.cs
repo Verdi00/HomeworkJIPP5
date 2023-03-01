@@ -1,5 +1,6 @@
-﻿using System;
-using System.Collections.Generic; // Kolekcje - Zadanie 3
+using System;
+using System.Collections.Generic;
+using System.Diagnostics.Metrics;
 
 namespace Homework
 {
@@ -76,15 +77,14 @@ namespace Homework
 
             // Zadanie 5
 
-            string aa = "Ala ";
-            string bb = "ma ";
-            string cc = "kota";
+            string a1 = "Ala ";
+            string b1 = "ma ";
+            string c1 = "kota";
 
-            string resultz = aa + bb + cc;
-            Console.WriteLine(resultz);
+            string result3 = a1 + b1 + c1;
+            Console.WriteLine(result3);
 
-            // Wniosek - zwracać uwagę na powtarzające się zmienne
-            // Wniosek - zmienne typu string można ze sobą łączyć
+
 
             // Instrukcje sterujące i pętle
             // Zadanie 1
@@ -111,88 +111,27 @@ namespace Homework
             {
                 Console.WriteLine("C#");
             }
+            int counter1 = 0;
 
-            int licznik = 0;
-
-            while (licznik < 10)
+            while (counter1 < 10)
             {
                 Console.WriteLine("C#");
-                licznik++;
+                counter1++;
             }
 
-            // Zadanie 3
 
-            int n = 10;
-
-            for (int i = 0; i < n; i++)
-            {
-                if (i % 2 == 0)
-                {
-                    Console.WriteLine(i.ToString() + " - Parzysta");
-                }
-                else
-                {
-                    Console.WriteLine(i.ToString() + " - Nieparzysta");
-                }
-            }
-
-            // Zadanie 4*
-
-            n = 5;
-
-            for (int i = 1; i <= n; i++)
-            {
-                for (int j = 0; j < i; j++)
-                {
-                    Console.Write("*");
-                }
-                Console.Write("\n");
-            }
-
-            // Zadanie 5*
-
-            int exam = 69;
-
-            if (exam >= 0 && exam <= 39)
-            {
-                Console.Write("Ocena Niedostateczna");
-            }
-            else if (exam >= 40 && exam <= 54)
-            {
-                Console.Write("Ocena Dopuszczająca");
-            }
-            else if (exam >= 55 && exam <= 69)
-            {
-                Console.Write("Ocena Dostateczna");
-            }
-            else if (exam >= 70 && exam <= 84)
-            {
-                Console.Write("Ocena Dobra");
-            }
-            else if (exam >= 85 && exam <= 98)
-            {
-                Console.Write("Ocena Bardzo Dobra");
-            }
-            else if (exam >= 99 && exam <= 100)
-            {
-                Console.Write("Ocena Celująca");
-            }
-            else
-            {
-                Console.Write("Wartość poza zakresem");
-            }
 
             // Kolekcje
             // Zadanie 1
 
-            string[] colors = new string[4] { "czarny", "biały", "niebieski", "czerwony" };
+            string[] colors = new string[4] { "niebieski", "żółty", "zielony", "czerwony" };
 
             Console.WriteLine("Mój pierwszy kolor to: " + colors[0]);
             Console.WriteLine("Mój ostatni kolor to: " + colors[3]);
 
             // Zadanie 2
 
-            int[] tab = new int[10] { 23, 453, 654, 342, 8, 34, 12, 76, 87, 123 };
+            int[] tab = new int[10] { 2423, 455233, 622554, 3626242, 84234, 32424, 123422, 7234256, 8235257, 12262363 };
 
             for (int i = 0; i < 10; i++)
             {
@@ -204,21 +143,21 @@ namespace Homework
                 Console.WriteLine("Liczba: " + i);
             }
 
-            licznik = 0;
+            counter1 = 0;
 
-            while (licznik < 10)
+            while (counter1 < 10)
             {
-                Console.WriteLine("Liczba: " + tab[licznik]);
-                licznik++;
+                Console.WriteLine("Liczba: " + tab[counter1]);
+                counter1++;
             }
 
             // Zadanie 3
 
             List<string> fruits = new List<string>();
-            fruits.Add("banan");
-            fruits.Add("papaja");
-            fruits.Add("ananas");
             fruits.Add("kiwi");
+            fruits.Add("arbuz");
+            fruits.Add("pomarańcza");
+            fruits.Add("mandarynka");
 
             for (int i = 0; i < fruits.Count; i++)
             {
@@ -231,7 +170,7 @@ namespace Homework
                     Console.Write(fruits[i] + ", ");
                 }
             }
-
+            Console.WriteLine(" ");
             fruits.Remove(fruits[0]);
             fruits.RemoveAt(fruits.Count - 1);
 
